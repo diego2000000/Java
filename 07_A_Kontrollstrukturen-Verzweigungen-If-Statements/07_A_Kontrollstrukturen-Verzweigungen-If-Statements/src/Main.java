@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class Main {
 
 
         // Your solution here:
-        if (bigNumber > smallNumber){
+        if (bigNumber > smallNumber) {
             System.out.println("5000 is greater than 1!");
         }
 
@@ -27,7 +28,7 @@ public class Main {
 
         // Your solution here:
         boolean correct = bigNumber > smallNumber;
-        if (correct){
+        if (correct) {
             System.out.println("5000 is greater than 1!");
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -42,7 +43,7 @@ public class Main {
         drivingSpeed = userInputScanner.nextInt();
         // Check if the drivingSpeed is greater than the value of the variable "speedlimit".
         // If so, print "You drove too fast!"
-        if (drivingSpeed > speedLimit){
+        if (drivingSpeed > speedLimit) {
             System.out.println("You drove too fast");
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -52,8 +53,8 @@ public class Main {
         //      the string "Ancient history!"
         int year;
         System.out.println("input a year");
-        year =userInputScanner.nextInt();
-        if (year < 2000){
+        year = userInputScanner.nextInt();
+        if (year < 2000) {
             System.out.println("Ancient history");
         }
 
@@ -66,9 +67,9 @@ public class Main {
         //      If the "drivingSpeed" is within the limit, print "You are all good!"
         System.out.println("input driving speed");
         drivingSpeed = userInputScanner.nextInt();
-        if (drivingSpeed > speedLimit){
+        if (drivingSpeed > speedLimit) {
             System.out.println("You drove too fast");
-        }else {
+        } else {
             System.out.println("You are all good");
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -78,12 +79,12 @@ public class Main {
         //      If not, then tell the user that it is not legally allowed
         //      to consume alcohol everywhere in the world.
         byte age;
-        byte legalage =21;
+        byte legalage = 21;
         System.out.println("how old are you");
-        age=userInputScanner.nextByte();
-        if (age > legalage){
+        age = userInputScanner.nextByte();
+        if (age > legalage) {
             System.out.println("You are allowed to drink Alcohol around the World");
-        }else {
+        } else {
             System.out.println("You are not allowed to drink Alcohol around the World");
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -100,13 +101,13 @@ public class Main {
         //      However, if the user is older than 21, then tell him that he is allowed to consume alcohol
         //      everywhere.
         byte legalAgeNotUSA = 18;
-        if (age > legalAgeNotUSA){
-            if (age > legalage){
+        if (age > legalAgeNotUSA) {
+            if (age > legalage) {
                 System.out.println("You are allowed to drink Alcohol around the world");
-            }else {
+            } else {
                 System.out.println("You are allowed to drink Alcohol around the World except in USA");
             }
-        }else {
+        } else {
             System.out.println("You are not allowed to drink Alcohol anywhere");
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -115,14 +116,14 @@ public class Main {
         //      If the user is younger than 20, then print out "You are still young".
         //      And if the user also has an IQ higher than 120, then print out this:
         //      " ...and also very smart!"
-        short  IQ;
+        short IQ;
         short smart = 120;
         System.out.println("input IQ");
-        if (age < 20 && IQ > smart){
+        if (age < 20 && IQ > smart) {
             System.out.println("You are still young and very smart");
-        }else if (age < 20){
+        } else if (age < 20) {
             System.out.println("You are still young");
-        }else if (IQ > smart){
+        } else if (IQ > smart) {
             System.out.println("You are smart");
         }
 
@@ -153,7 +154,18 @@ public class Main {
         //      Give the second number:
         //      3
         //      The numbers are equal!
-
+        System.out.println("Input two numbers");
+        int number1;
+        int number2;
+        number1 = userInputScanner.nextInt();
+        number2 = userInputScanner.nextInt();
+        if (number1 > number2) {
+            System.out.println(number1);
+        } else if (number1 < number2) {
+            System.out.println(number2);
+        } else {
+            System.out.println("Numbers are equal");
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 9");
