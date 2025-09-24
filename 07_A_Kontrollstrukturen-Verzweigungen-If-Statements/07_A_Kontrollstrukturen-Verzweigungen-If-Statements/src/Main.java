@@ -119,11 +119,12 @@ public class Main {
         short IQ;
         short smart = 120;
         System.out.println("input IQ");
-        if (age < 20 && IQ > smart) {
+        IQ = userInputScanner.nextShort();
+        if (age < 20 && IQ >= smart) {
             System.out.println("You are still young and very smart");
         } else if (age < 20) {
             System.out.println("You are still young");
-        } else if (IQ > smart) {
+        } else if (IQ >= smart) {
             System.out.println("You are smart");
         }
 
@@ -178,7 +179,12 @@ public class Main {
         //      81-90     very good
         //      91-100    awesome!
         //      > 100     impossible
-
+        byte grade;
+        System.out.println("Input grade");
+        grade = userInputScanner.nextByte();
+        if (grade >= 51 && grade <= 60) {
+            System.out.println("ok");
+        }
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 10");
         // 10.  Write a little program which checks the state of a door. If the door is open, print: "Entering room...".
