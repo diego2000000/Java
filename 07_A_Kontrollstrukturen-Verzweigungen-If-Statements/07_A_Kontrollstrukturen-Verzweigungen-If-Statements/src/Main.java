@@ -120,6 +120,8 @@ public class Main {
         System.out.println("input IQ");
         if (age < 20 && IQ > smart){
             System.out.println("You are still young and very smart");
+        }else if (age < 20){
+            System.out.println("You are still young");
         }
 
         //--------------------------------------------------------------------------------------------------------------
