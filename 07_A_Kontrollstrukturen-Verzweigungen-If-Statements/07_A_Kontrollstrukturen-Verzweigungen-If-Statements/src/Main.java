@@ -184,8 +184,16 @@ public class Main {
         grade = userInputScanner.nextByte();
         if (grade >= 51 && grade <= 60) {
             System.out.println("ok");
+        }else if (grade >=61 && grade<=80){
+            System.out.println("good");
+        }else if (grade >=81 && grade<=90) {
+            System.out.println("very good");
+        }else if (grade >=31 && grade<=50){
+            System.out.println("poor");
+        }else if (grade >=0 && grade<=30){
+            System.out.println("failed");
         }
-        //--------------------------------------------------------------------------------------------------------------
+                        //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 10");
         // 10.  Write a little program which checks the state of a door. If the door is open, print: "Entering room...".
         //      If the door is not open, print: "Opening door....".
