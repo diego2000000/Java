@@ -205,10 +205,13 @@ public class Main {
 
         boolean isDoorOpen = true;
         // If-else-statement here
-
+        if (isDoorOpen) {
+            System.out.println("Entering room");
+        }
+        System.out.println("Opening door");
 
         // Short form here
-
+        System.out.println(isDoorOpen ? "Entering room" : "Opening door");
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 11");
