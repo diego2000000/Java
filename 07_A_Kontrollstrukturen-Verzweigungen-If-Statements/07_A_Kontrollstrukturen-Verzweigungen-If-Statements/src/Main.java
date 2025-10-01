@@ -79,10 +79,10 @@ public class Main {
         //      If not, then tell the user that it is not legally allowed
         //      to consume alcohol everywhere in the world.
         byte age;
-        byte legalage = 21;
+        byte legalAge = 21;
         System.out.println("how old are you");
         age = userInputScanner.nextByte();
-        if (age > legalage) {
+        if (age > legalAge) {
             System.out.println("You are allowed to drink Alcohol around the World");
         } else {
             System.out.println("You are not allowed to drink Alcohol around the World");
@@ -102,7 +102,7 @@ public class Main {
         //      everywhere.
         byte legalAgeNotUSA = 18;
         if (age > legalAgeNotUSA) {
-            if (age > legalage) {
+            if (age > legalAge) {
                 System.out.println("You are allowed to drink Alcohol around the world");
             } else {
                 System.out.println("You are allowed to drink Alcohol around the World except in USA");
@@ -202,7 +202,7 @@ public class Main {
         if (grade > 100 || grade < 0) {
             System.out.println("impossible");
         } else if (grade > 91) {
-            System.out.println("awsome");
+            System.out.println("awesome");
         } else if (grade > 81) {
             System.out.println("very good");
         } else if (grade > 61) {
