@@ -207,8 +207,10 @@ public class Main {
         // If-else-statement here
         if (isDoorOpen) {
             System.out.println("Entering room");
+        } else {
+            System.out.println("Opening door");
         }
-        System.out.println("Opening door");
+
 
         // Short form here
         System.out.println(isDoorOpen ? "Entering room" : "Opening door");
