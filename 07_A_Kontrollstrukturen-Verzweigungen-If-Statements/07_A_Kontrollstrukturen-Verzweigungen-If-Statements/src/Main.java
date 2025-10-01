@@ -192,6 +192,8 @@ public class Main {
             System.out.println("poor");
         }else if (grade >=0 && grade<=30){
             System.out.println("failed");
+        }else if (grade<0||grade>100){
+            System.out.println("impossible");
         }
                         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 10");
