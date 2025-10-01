@@ -222,6 +222,12 @@ public class Main {
         //      otherwise, inform them that they are unfortunately not eligible for the discount.
 
         //      Create two solutions for this task: one that uses the "==" operator and another that uses the "!=" operator.
+        System.out.println("you will receive a discount if you are exactly 18 years old");
+        if (age == 18) {
+            System.out.println("you will receive a discount");
+        } else if (age != 18) {
+            System.out.println("you will not receive a discount");
+        }
     }
 }
 
