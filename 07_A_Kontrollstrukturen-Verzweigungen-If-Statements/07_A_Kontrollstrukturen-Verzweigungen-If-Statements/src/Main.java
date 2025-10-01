@@ -160,10 +160,12 @@ public class Main {
         int number2;
         number1 = userInputScanner.nextInt();
         number2 = userInputScanner.nextInt();
+        System.out.println("number 1 is " + number1);
+        System.out.println("nummber 2 is " + number2);
         if (number1 > number2) {
-            System.out.println(number1);
+            System.out.println("the greater nummber is " + number1);
         } else if (number1 < number2) {
-            System.out.println(number2);
+            System.out.println("the greater nummber is " + number2);
         } else {
             System.out.println("Numbers are equal");
         }
@@ -188,12 +190,29 @@ public class Main {
             System.out.println("good");
         } else if (grade >= 81 && grade <= 90) {
             System.out.println("very good");
+        } else if (grade >= 91 && grade < 100) {
+            System.out.println("awesome");
         } else if (grade >= 31 && grade <= 50) {
             System.out.println("poor");
         } else if (grade >= 0 && grade <= 30) {
             System.out.println("failed");
         } else if (grade < 0 || grade > 100) {
             System.out.println("impossible");
+        }
+        if (grade > 100 || grade < 0) {
+            System.out.println("impossible");
+        } else if (grade > 91) {
+            System.out.println("awsome");
+        } else if (grade > 81) {
+            System.out.println("very good");
+        } else if (grade > 61) {
+            System.out.println("good");
+        } else if (grade > 51) {
+            System.out.println("ok");
+        } else if (grade > 31) {
+            System.out.println("poor");
+        } else if (grade > 0) {
+            System.out.println("failed");
         }
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 10");
