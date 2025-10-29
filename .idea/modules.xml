@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/00_A_AsciiAusgabe/00_A_AsciiAusgabe.iml" filepath="$PROJECT_DIR$/00_A_AsciiAusgabe/00_A_AsciiAusgabe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_A_Kommentare/01_A_Kommentare.iml" filepath="$PROJECT_DIR$/01_A_Kommentare/01_A_Kommentare.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_A_VariablenLösung/02_A_VariablenLösung.iml" filepath="$PROJECT_DIR$/02_A_VariablenLösung/02_A_VariablenLösung.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_A_String/03_A_String.iml" filepath="$PROJECT_DIR$/03_A_String/03_A_String.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_A_OperatorenLösungen/04_A_OperatorenLösungen.iml" filepath="$PROJECT_DIR$/04_A_OperatorenLösungen/04_A_OperatorenLösungen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_A_TypeCasting/05_A_TypeCasting.iml" filepath="$PROJECT_DIR$/05_A_TypeCasting/05_A_TypeCasting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_A_InputEinlesen/06_A_InputEinlesen.iml" filepath="$PROJECT_DIR$/06_A_InputEinlesen/06_A_InputEinlesen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_A_Kontrollstrukturen-Verzweigungen-If-Statements/07_A_Kontrollstrukturen-Verzweigungen-If-Statements.iml" filepath="$PROJECT_DIR$/07_A_Kontrollstrukturen-Verzweigungen-If-Statements/07_A_Kontrollstrukturen-Verzweigungen-If-Statements.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_A_Kontrollstrukturen-Verzweigungen-Logische-Operatoren/08_A_Kontrollstrukturen-Verzweigungen-Logische-Operatoren.iml" filepath="$PROJECT_DIR$/08_A_Kontrollstrukturen-Verzweigungen-Logische-Operatoren/08_A_Kontrollstrukturen-Verzweigungen-Logische-Operatoren.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Code_cracker/Code_cracker.iml" filepath="$PROJECT_DIR$/Code_cracker/Code_cracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
+    </modules>
+  </component>
+</project>
