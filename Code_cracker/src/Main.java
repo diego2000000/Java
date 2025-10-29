@@ -6,8 +6,8 @@ public class Main {
         Random random = new Random();
         String code = String.format("%04d", random.nextInt(1000));
         Scanner userInput = new Scanner();
-        String awnser = userInput.nextLine();
-        for (!code.equals(awnser)) {
+        String answer = userInput.nextLine();
+        for (!answer.equals(code)) {
             String awnser = userInput.nextLine();
         }
         System.out.println();
