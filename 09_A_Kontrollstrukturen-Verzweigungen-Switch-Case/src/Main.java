@@ -97,7 +97,25 @@ public class Main {
         // 03. Solve this exercise with the help of both, the old switch-statement and the new switch expression.
         //     Create a program that takes a month number (1-12) and prints the number of days in that month.
         //     Assume it's not a leap year.
-
+        System.out.println("Input a Month (in Numbers 1-12)");
+        number = userInput.nextByte();
+        switch (number) {
+            case 1, 3, 5, 8, 10, 12:
+                System.out.println("31 days in this Month");
+                break;
+            case 2, 4, 6, 7, 9, 11:
+                System.out.println("30 days in this Month");
+                break;
+            default:
+                System.out.println("Invalid Input");
+                break;
+        }
+        number = userInput.nextByte();
+        switch (number) {
+            case 1, 3, 5, 8, 10, 12 -> System.out.println("31 days in this Month");
+            case 2, 4, 6, 7, 9, 11 -> System.out.println("30 days in this Month");
+            default -> System.out.println("Invalid Input");
+        }
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 04");
