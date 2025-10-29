@@ -125,6 +125,23 @@ public class Main {
         //      Example: "Select a class (1-Warrior, 2-Mage, 3-Rogue, 4-Cleric): "
         //      User Input: 2
         //      Output: "Mage (Strength: 3, Agility: 4, Intelligence: 9)"
+        byte pClassbyte;
+        System.out.println("Select a class (1-Warrior, 2-Mage, 3-Rogue, 4-Cleric)");
+        pClassbyte = userInput.nextByte();
+        String pClass = switch (pClassbyte) {
+            case 1 -> "Warrior";
+            case 2 -> "Mage";
+            case 3 -> "Rouge";
+            case 4 -> "Cleric";
+            default -> "Unknown Input";
+        }
+        switch (pClass) {
+            case "Warrior" -> System.out.println("Recommended stats Strength 9 Agility 4 Intelligence 3");
+            case "Mage" -> System.out.println("Recommended stats Strength 3 Agility 4 Intelligence 9");
+            case "Rouge" -> System.out.println("Recommended stats Strength 3 Agility 9 Intelligence 4");
+            case "Cleric" -> System.out.println("Recommended stats Strength 3 Agility 4 Intelligence 9");
+            default -> System.out.println("No Class selectet");
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
