@@ -134,16 +134,32 @@ public class Main {
             case 3 -> "Rouge";
             case 4 -> "Cleric";
             default -> "Unknown Input";
-        }
+        };
         switch (pClass) {
             case "Warrior" -> System.out.println("Recommended stats Strength 9 Agility 4 Intelligence 3");
             case "Mage" -> System.out.println("Recommended stats Strength 3 Agility 4 Intelligence 9");
             case "Rouge" -> System.out.println("Recommended stats Strength 3 Agility 9 Intelligence 4");
             case "Cleric" -> System.out.println("Recommended stats Strength 3 Agility 4 Intelligence 9");
-            default -> System.out.println("No Class selectet");
+            default -> System.out.println("No Class selected");
         }
+        System.out.println("Select attributes total 16 points");
+        System.out.println("Strength");
+        byte strenght;
+        byte agility;
+        byte intelligence;
+        short total;
+        strenght=userInput.nextByte();
+        System.out.println("Agility");
+        agility=userInput.nextByte();
+        System.out.println("Intelligence");
+        intelligence=userInput.nextByte();
+        total=(short) (intelligence+agility+strenght);
+        if (!(total ==16)){
+            System.out.println("Invalid Ability input");
 
-
+        }else {
+            System.out.println("your class is " + pClass + " your Strength is " + strenght + " your Agility is " + agility + " your Intelligence is " + intelligence);
+        }
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 05");
         // 05.  Solve this exercise with whatever switch you feel more comfortable (new or old).
