@@ -5,11 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         String code = String.format("%04d", random.nextInt(1000));
-        Scanner userInput = new Scanner();
-        String answer = userInput.nextLine();
-        for (!answer.equals(code)) {
-            String awnser = userInput.nextLine();
+        Scanner userInput = new Scanner(System.in);
+        String answer = "0";
+        System.out.println(code);
+        while (!answer.equals(code)) {
+            answer = userInput.nextLine();
         }
-        System.out.println();
+        System.out.println("correct");
     }
 }
