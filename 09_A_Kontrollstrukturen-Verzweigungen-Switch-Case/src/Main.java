@@ -143,23 +143,31 @@ public class Main {
             default -> System.out.println("No Class selected");
         }
         System.out.println("Select attributes total 16 points");
-        System.out.println("Strength");
-        byte strenght;
-        byte agility;
-        byte intelligence;
-        short total;
-        strenght=userInput.nextByte();
-        System.out.println("Agility");
-        agility=userInput.nextByte();
-        System.out.println("Intelligence");
-        intelligence=userInput.nextByte();
-        total=(short) (intelligence+agility+strenght);
-        if (!(total ==16)){
-            System.out.println("Invalid Ability input");
+        byte strenght = 0;
+        byte agility = 0;
+        byte intelligence = 0;
+        short total = 0;
 
-        }else {
-            System.out.println("your class is " + pClass + " your Strength is " + strenght + " your Agility is " + agility + " your Intelligence is " + intelligence);
+        while (total != 16) {
+
+            System.out.println("Strength");
+            strenght = userInput.nextByte();
+            System.out.println("Agility");
+            agility = userInput.nextByte();
+            System.out.println("Intelligence");
+            intelligence = userInput.nextByte();
+            total = (short) (intelligence + agility + strenght);
+            if (total != 16) {
+                System.out.println("Invalid Ability input");
+            } else {
+                break;
+            }
+
         }
+
+
+        System.out.println("your class is " + pClass + " your Strength is " + strenght + " your Agility is " + agility + " your Intelligence is " + intelligence);
+
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 05");
         // 05.  Solve this exercise with whatever switch you feel more comfortable (new or old).
@@ -185,25 +193,28 @@ public class Main {
         //      9: kyuu
         //      default: Mukō na sūchi
         System.out.println("Which digit do you want to translate?(0-9)");
-        number=userInput.nextByte();
+        number = userInput.nextByte();
         byte language;
         System.out.println("Which digit do you want to translate? (1-german, 2-english, 3-japanese)");
-        language=userInput.nextByte();
-        switch (language){
+        language = userInput.nextByte();
+        switch (language) {
             case 1:
-                switch (number){
-                    case 0-> System.out.println("null");
+                switch (number) {
+                    case 0 -> System.out.println("null");
                     case 1 -> System.out.println("eins");
-                    case 2-> System.out.println("zwei");
-                    case 3-> System.out.println("drei");
-                    case 4-> System.out.println("vier");
-                    case 5-> System.out.println("fünf");
-                    case 6-> System.out.println("sechs");
-                    case 7-> System.out.println("sieben");
-                    case 8-> System.out.println("acht");
-                    case 9-> System.out.println("neun");
+                    case 2 -> System.out.println("zwei");
+                    case 3 -> System.out.println("drei");
+                    case 4 -> System.out.println("vier");
+                    case 5 -> System.out.println("fünf");
+                    case 6 -> System.out.println("sechs");
+                    case 7 -> System.out.println("sieben");
+                    case 8 -> System.out.println("acht");
+                    case 9 -> System.out.println("neun");
                     default -> System.out.println("falsche Eingabe");
+
                 }
+                break;
+
             case 2:
                 switch (number) {
                     case 0 -> System.out.println("zero");
@@ -218,6 +229,7 @@ public class Main {
                     case 9 -> System.out.println("nine");
                     default -> System.out.println("invalid Input");
                 }
+                break;
             case 3:
                 switch (number) {
                     case 0 -> System.out.println("zero");
@@ -232,9 +244,11 @@ public class Main {
                     case 9 -> System.out.println("kyuu");
                     default -> System.out.println("Mukō na sūchi");
                 }
+                break;
             default:
                 System.out.println("invalid Input");
         }
+
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 06");
@@ -242,6 +256,30 @@ public class Main {
         //      Write a small calculator. A user types in two numbers and an operation ('addition', 'subtraction', 'division', 'multiplication').
         //      Calculate the correct answer and print it out.
         //      Print a warning when the user tries to divide by 0 (Example: 2/0 -> number two must not be 0!
+        String opperator;
+        opperator = userInput.nextLine();
+        System.out.println("Input witch operator you want to chose ('addition', 'subtraction', 'division', 'multiplication')");
+        opperator = userInput.nextLine();
+        short number01;
+        short number02;
+        System.out.println("Input first number");
+        number01 = userInput.nextShort();
+        System.out.println("Input second number");
+        number02 = userInput.nextShort();
+        switch (opperator) {
+            case "addition" -> System.out.println(("your result is " + ((int) number01 + number02)));
+            case "subtraction" -> System.out.println(("your result is " + ((int) number01 - number02)));
+            case "division" -> {
+                if (number01 == 0 || number02 == 0) {
+                    System.out.println("invalid Input cant divide by 0");
+                } else {
+                    System.out.println(("your result is " + ((int) number01 / number02)));
+                }
+            }
+
+            case "multiplication" -> System.out.println(("your result is " + ((int) number01 * number02)));
+            default -> System.out.println("Invalid input");
+        }
 
 
         //--------------------------------------------------------------------------------------------------------------
