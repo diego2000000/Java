@@ -47,7 +47,7 @@ public class Main {
                     break;
 
                 case 1:
-                    yOrN="y";
+                    yOrN = "y";
                     while (yOrN.equalsIgnoreCase("y")) {
                         int number01;
                         int number02;
@@ -58,27 +58,38 @@ public class Main {
                         int result = number02 * (number02 + 1) / 2 - number01 * (number01 + 1) / 2 + number01;
                         System.out.println(result);
                         System.out.println("Would you like to rerun the function? (y/n)");
-                        yOrN=userInput.nextLine();
-                        yOrN=userInput.nextLine();
+                        yOrN = userInput.nextLine();
+                        yOrN = userInput.nextLine();
                         if (yOrN.equalsIgnoreCase("n")) {
-                            break ;
+                            break;
                         }
                     }
 
                 case 2:
-                    yOrN="y";
+                    yOrN = "y";
+                    subLoop:
                     while (yOrN.equalsIgnoreCase("y")) {
                         int number01;
                         int number02;
                         System.out.println("I will think of a number and your going to guess it.");
                         System.out.println("In which range should i guess the number from n to m?");
                         System.out.println("What should be the minimum value?");
-                        number01=userInput.nextInt();
+                        number01 = userInput.nextInt();
                         System.out.println("Thank you. What about the maximum value?");
-                        number02=userInput.nextInt();
+                        number02 = userInput.nextInt();
 
-                        System.out.println("I have a random number form "+ number01+" to "+number02+ ", what do you think is it?");
-
+                        System.out.println("I have a random number form " + number01 + " to " + number02 + ", what do you think is it?");
+                        Random randomRange = new Random();
+                        int result = randomRange.nextInt(number02 - number01) + number01;
+                        System.out.println(result);
+                        int awnser = 99;
+                        while (result != awnser) {
+                            System.out.println("Take you Guess");
+                            awnser = userInput.nextInt();
+                            if (result == awnser) {
+                                break subLoop;
+                            }
+                        }
                         break;
                     }
                 case 3:
