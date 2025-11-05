@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -67,6 +68,16 @@ public class Main {
                 case 2:
                     yOrN="y";
                     while (yOrN.equalsIgnoreCase("y")) {
+                        int number01;
+                        int number02;
+                        System.out.println("I will think of a number and your going to guess it.");
+                        System.out.println("In which range should i guess the number from n to m?");
+                        System.out.println("What should be the minimum value?");
+                        number01=userInput.nextInt();
+                        System.out.println("Thank you. What about the maximum value?");
+                        number02=userInput.nextInt();
+
+                        System.out.println("I have a random number form "+ number01+" to "+number02+ ", what do you think is it?");
 
                         break;
                     }
