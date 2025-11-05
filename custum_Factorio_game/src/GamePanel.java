@@ -42,6 +42,8 @@ public class GamePanel extends JPanel implements Runnable {
 
         double drawInterval = 1_000_000_000 / FPS;//0.16666666 seconds
         double nextDrawTime = System.nanoTime() + drawInterval;//System.nanoTime is the current in game Time
+        long timer=0;
+        int drawCount=0;
 
         while (gameThread != null) {
 
@@ -50,11 +52,18 @@ public class GamePanel extends JPanel implements Runnable {
 
             // 2 DRAW: draw the screen with the updated info
             repaint();
+            timer+=(nextDrawTime-System.nanoTime());
+            drawCount++;
 
+            if (timer>=1_000_000_000){
+                System.out.println("FPS"+drawCount);
+                drawCount=0;
+                timer=0;
+            }
             try {
 
                 double remainingTime = nextDrawTime - System.nanoTime();
-                remainingTime = remainingTime / 1_000_000;
+                remainingTime = remainingTime / 1_000_000;//converted nanoseconds to milliseconds
 
                 if (remainingTime < 0) {
                     remainingTime = 0;
