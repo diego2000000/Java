@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        String code = String.format("%04d", random.nextInt(1000));
+        String code = String.format("%04d", random.nextInt(1000));//%04d if the code is smaller than a four-digit number it will fill the spaces before with 0 example: 21 = 0021
         Scanner userInput = new Scanner(System.in);
         String answer = "0";
         String answer01;
