@@ -89,6 +89,7 @@ public class Main {
                             if (result == awnser) {
                                 break subLoop;
                             }
+                            System.out.println("Wrong guess");
                         }
                         break;
                     }
