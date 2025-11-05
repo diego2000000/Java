@@ -13,6 +13,7 @@ public class Main {
         String answer04;
         //System.out.println(code);
         System.out.println("Guess the four digit code");
+
         while (!answer.equals(code)) {
             answer = userInput.nextLine();
             answer01 = answer.substring(0, 1);
@@ -48,9 +49,6 @@ public class Main {
             }else {
                 System.out.println("fourth digit is incorrect");
             }
-
-
-
         }
         System.out.println("correct");
     }

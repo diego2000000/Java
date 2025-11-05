@@ -157,8 +157,16 @@ public class Main {
             System.out.println("Intelligence");
             intelligence = userInput.nextByte();
             total = (short) (intelligence + agility + strenght);
-            if (total != 16) {
+            String answer;
+            answer=userInput.nextLine();
+            if (total > 16) {
                 System.out.println("Invalid Ability input");
+            } else if (total < 16) {
+                System.out.println("you didn't spend all ability points. not spent points will be lost. do you wish to continue ? (y/n)");
+                answer=userInput.nextLine();
+                if (answer.equalsIgnoreCase("y")){
+                    break;
+                }
             } else {
                 break;
             }
