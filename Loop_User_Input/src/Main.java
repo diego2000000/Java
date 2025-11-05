@@ -36,11 +36,11 @@ public class Main {
 
             switch (option0to9) {
                 case 0:// exit function
-                    System.out.println("Do you want to continue the program? (y/n)");
+                    System.out.println("Do you want to close the program? (y/n)");
                     String yOrN;
                     yOrN = userInput.nextLine();
                     yOrN = userInput.nextLine();
-                    if (yOrN.equalsIgnoreCase("n")) {
+                    if (yOrN.equalsIgnoreCase("y")) {
                         System.out.println("Goodbye " + userName);
                         break mainLoop;
                     }
@@ -77,21 +77,34 @@ public class Main {
                         number01 = userInput.nextInt();
                         System.out.println("Thank you. What about the maximum value?");
                         number02 = userInput.nextInt();
-
-                        System.out.println("I have a random number form " + number01 + " to " + number02 + ", what do you think is it?");
-                        Random randomRange = new Random();
-                        int result = randomRange.nextInt(number02 - number01) + number01;
-                        System.out.println(result);
-                        int awnser = 99;
-                        while (result != awnser) {
-                            System.out.println("Take you Guess");
-                            awnser = userInput.nextInt();
-                            if (result == awnser) {
-                                break subLoop;
+                        if (number01 != number02) {
+                            if (number01 < number02) {
+                                System.out.println("I have a random number form " + number01 + " to " + number02 + ", what do you think is it?");
+                                Random randomRange = new Random();
+                                int result = randomRange.nextInt(number02 - number01) + number01;
+                                System.out.println(result);
+                                int awnser = 99;
+                                while (result != awnser) {
+                                    System.out.println("Take you Guess");
+                                    awnser = userInput.nextInt();
+                                    if (result == awnser) {
+                                        System.out.println("Correct!");
+                                        System.out.println("do you want to try again? (y/n)");
+                                        yOrN = userInput.nextLine();
+                                        yOrN = userInput.nextLine();
+                                        if (yOrN.equalsIgnoreCase("n")) {
+                                            break subLoop;
+                                        }
+                                    } else {
+                                        System.out.println("Wrong guess");
+                                    }
+                                }
+                            }else {
+                                System.out.println("smaller number must be smaller");
                             }
-                            System.out.println("Wrong guess");
+                        } else {
+                            System.out.println("numbers must be different");
                         }
-                        break;
                     }
                 case 3:
                     break;
