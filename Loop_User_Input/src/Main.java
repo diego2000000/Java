@@ -99,7 +99,7 @@ public class Main {
                                         System.out.println("Wrong guess");
                                     }
                                 }
-                            }else {
+                            } else {
                                 System.out.println("smaller number must be smaller");
                             }
                         } else {
@@ -107,6 +107,18 @@ public class Main {
                         }
                     }
                 case 3:
+                   String[] metal = {
+                           "Let it Roar - Battle Beast",
+                           "Bastard von Asgard - Feuerschwanz",
+                           "Sulfur - LANDMVRKS",
+                           "My Apocalypse - Arche Enemy",
+                           "Fear of the Dark - Iron Maiden",
+                           "Dance of Death - Iron Maiden"
+                };
+                   String[] punk={
+
+                   };
+
                     break;
 
                 case 4:
