@@ -107,24 +107,32 @@ public class Main {
                         }
                     }
                 case 3:
-                   String[] metal = {
-                           "Let it Roar - Battle Beast",
-                           "Bastard von Asgard - Feuerschwanz",
-                           "Sulfur - LANDMVRKS",
-                           "My Apocalypse - Arche Enemy",
-                           "Fear of the Dark - Iron Maiden",
-                           "Dance of Death - Iron Maiden",
-                           "Straight To Hell`25 - Rage"
-                };
-                   String[] punk={
-                           "Optimisten - ENGST",
-                           "Junge, dein Leben - Serum 114",
-                           "Punk - Adam Angst",
-                           "Die Hände hoch - BRDIGUNG",
-                           "So erheben wir das Glas - Eizbrand",
-                           "Virus deiner Zeit - Ampex",
-                           "K.B.A.G - Jennifer Rostock"
-                   };
+                    String[] metal = {
+                            "Let it Roar - Battle Beast",
+                            "Bastard von Asgard - Feuerschwanz",
+                            "Sulfur - LANDMVRKS",
+                            "My Apocalypse - Arche Enemy",
+                            "Fear of the Dark - Iron Maiden",
+                            "Dance of Death - Iron Maiden",
+                            "Straight To Hell`25 - Rage"
+                    };
+                    String[] punk = {
+                            "Optimisten - ENGST",
+                            "Junge, dein Leben - Serum 114",
+                            "Punk - Adam Angst",
+                            "Die Hände hoch - BRDIGUNG",
+                            "So erheben wir das Glas - Eizbrand",
+                            "Virus deiner Zeit - Ampex",
+                            "K.B.A.G - Jennifer Rostock",
+                            "Hit That - The Offspring"
+                    };
+                    String[] seemans_lieder = {
+                            "Frei wie der Wind - Santiano",
+                            "Dann bin ich weg - Santiano",
+                            "Santiano - Santiano",
+                            "Santa Sangria - Mr.Hurley & Die Pulveraffen",
+                            ""
+                    };
 
                     break;
 
