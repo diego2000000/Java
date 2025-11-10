@@ -113,10 +113,17 @@ public class Main {
                            "Sulfur - LANDMVRKS",
                            "My Apocalypse - Arche Enemy",
                            "Fear of the Dark - Iron Maiden",
-                           "Dance of Death - Iron Maiden"
+                           "Dance of Death - Iron Maiden",
+                           "Straight To Hell`25 - Rage"
                 };
                    String[] punk={
-
+                           "Optimisten - ENGST",
+                           "Junge, dein Leben - Serum 114",
+                           "Punk - Adam Angst",
+                           "Die Hände hoch - BRDIGUNG",
+                           "So erheben wir das Glas - Eizbrand",
+                           "Virus deiner Zeit - Ampex",
+                           "K.B.A.G - Jennifer Rostock"
                    };
 
                     break;
