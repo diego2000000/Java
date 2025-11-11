@@ -24,12 +24,13 @@ public class Player extends Entity {
         y = 100;
         speed = 4;
     }
-    public void getPlayerImage(){
+
+    public void getPlayerImage() {
         try {
 
             down1 = ImageIO.read(getClass().getResourceAsStream("/player/player_Front.png"));//try to get the player sprites
 
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
