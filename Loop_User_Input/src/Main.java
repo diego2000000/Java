@@ -124,7 +124,8 @@ public class Main {
                             "So erheben wir das Glas - Eizbrand",
                             "Virus deiner Zeit - Ampex",
                             "K.B.A.G - Jennifer Rostock",
-                            "Hit That - The Offspring"
+                            "Hit That - The Offspring",
+                            "Deine Schuld - Die Ärtzte"
                     };
                     String[] seemans_lieder = {
                             "Frei wie der Wind - Santiano",
@@ -132,6 +133,14 @@ public class Main {
                             "Santiano - Santiano",
                             "Santa Sangria - Mr.Hurley & Die Pulveraffen",
                             ""
+                    };
+                    String[] pop ={
+                      "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
+                      "Pure Lust am Leben - Geier Sturzflug",
+                      "Die Zeit - EAV",
+                      "Wirf die Motorsäge an - EAV",
+                      "Es fährt kein Zug - EAV",
+                      ""
                     };
 
                     break;
