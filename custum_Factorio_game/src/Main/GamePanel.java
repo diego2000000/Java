@@ -1,3 +1,7 @@
+package Main;
+
+import entity.Player;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,15 +18,17 @@ public class GamePanel extends JPanel implements Runnable {
     //FPS
     int FPS = 60;
 
-    KeyHandler keyH = new KeyHandler();// adds key listener/handler to GamePanel
+    KeyHandler keyH = new KeyHandler();// adds key listener/handler to Main.GamePanel
     Thread gameThread;
+    Player player = new Player(this, keyH);
+
 
     //Set player default position
     int playerX = 100;
     int playerY = 100;
     int playerSpeed = 4;
 
-    public GamePanel() {//sets or adds the following functions to GamePanel
+    public GamePanel() {//sets or adds the following functions to Main.GamePanel
 
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));//sets window size
         this.setBackground(Color.black);
@@ -33,7 +39,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void startGameThread() {
 
-        gameThread = new Thread(this);//this refers to GamePanel
+        gameThread = new Thread(this);//this refers to Main.GamePanel
         gameThread.start();
     }
 
@@ -42,8 +48,8 @@ public class GamePanel extends JPanel implements Runnable {
 
         double drawInterval = 1_000_000_000 / FPS;//0.16666666 seconds
         double nextDrawTime = System.nanoTime() + drawInterval;//System.nanoTime is the current in game Time
-        long timer=0;
-        int drawCount=0;
+        long timer = 0;
+        int drawCount = 0;
 
         while (gameThread != null) {
 
@@ -52,13 +58,13 @@ public class GamePanel extends JPanel implements Runnable {
 
             // 2 DRAW: draw the screen with the updated info
             repaint();
-            timer+=(nextDrawTime-System.nanoTime());
+            timer += (nextDrawTime - System.nanoTime());
             drawCount++;
 
-            if (timer>=1_000_000_000){
-                System.out.println("FPS"+drawCount);
-                drawCount=0;
-                timer=0;
+            if (timer >= 1_000_000_000) {
+                System.out.println("FPS" + drawCount);
+                drawCount = 0;
+                timer = 0;
             }
             try {
 

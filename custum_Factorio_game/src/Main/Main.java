@@ -1,3 +1,5 @@
+package Main;
+
 import javax.swing.*;
 
 public class Main {
@@ -7,7 +9,7 @@ public class Main {
         window.setResizable(false);// disables resizing
         window.setTitle("Factorio");
 
-        GamePanel gamePanel = new GamePanel();//adds GamePanel to Main file
+        GamePanel gamePanel = new GamePanel();//adds Main.GamePanel to Main.Main file
         window.add(gamePanel);
 
         window.pack();
