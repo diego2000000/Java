@@ -154,13 +154,13 @@ public class Main {
                     String[][] genre = {
                             metal, punk, seemans_lieder, pop
                     };
-                    String[] genreName ={
+                    String[] genreName = {
                             "(0) metal",
                             "(1) punk",
                             "(2) seemans_lieder",
                             "(3) pop"
                     };
-                    yOrN="y";
+                    yOrN = "y";
                     subLoop:
                     while (yOrN.equalsIgnoreCase("y")) {
                         for (int i = 0; i < genreName.length; i++) {
