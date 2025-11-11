@@ -114,7 +114,9 @@ public class Main {
                             "My Apocalypse - Arche Enemy",
                             "Fear of the Dark - Iron Maiden",
                             "Dance of Death - Iron Maiden",
-                            "Straight To Hell`25 - Rage"
+                            "Straight To Hell`25 - Rage",
+                            "Metfest - Feuerschwanz",
+                            "Heavy Metal Viking - Brothers of Metal"
                     };
                     String[] punk = {
                             "Optimisten - ENGST",
@@ -132,19 +134,49 @@ public class Main {
                             "Dann bin ich weg - Santiano",
                             "Santiano - Santiano",
                             "Santa Sangria - Mr.Hurley & Die Pulveraffen",
+                            "Drunken Sailor - MALINDA",
+                            "Wellerman - Nathan Evans",
+                            "My Mother Told Me - Peyton Parrish",
+                            "",
                             ""
                     };
-                    String[] pop ={
-                      "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
-                      "Pure Lust am Leben - Geier Sturzflug",
-                      "Die Zeit - EAV",
-                      "Wirf die Motorsäge an - EAV",
-                      "Es fährt kein Zug - EAV",
-                      ""
+                    String[] pop = {
+                            "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
+                            "Pure Lust am Leben - Geier Sturzflug",
+                            "Die Zeit - EAV",
+                            "Wirf die Motorsäge an - EAV",
+                            "Es fährt kein Zug - EAV",
+                            "Eloise & Die Krise - EAV",
+                            "Lez Dance - EAV",
+                            "3 weisse Tauben - EAV",
+                            "Neandertal - EAV"
                     };
-
-                    break;
-
+                    String[][] genre = {
+                            metal, punk, seemans_lieder, pop
+                    };
+                    String[] genreName ={
+                            "(0) metal",
+                            "(1) punk",
+                            "(2) seemans_lieder",
+                            "(3) pop"
+                    };
+                    yOrN="y";
+                    subLoop:
+                    while (yOrN.equalsIgnoreCase("y")) {
+                        for (int i = 0; i < genreName.length; i++) {
+                            System.out.println(genreName[i]);
+                        }
+                        Random randomSong = new Random();
+                        int song = randomSong.nextInt(0, 9);
+                        option0to9 = userInput.nextByte();
+                        System.out.println(genre[option0to9][song]);
+                        System.out.println("do you want to try again? (y/n)");
+                        yOrN = userInput.nextLine();
+                        yOrN = userInput.nextLine();
+                        if (yOrN.equalsIgnoreCase("n")) {
+                            break subLoop;
+                        }
+                    }
                 case 4:
                     break;
 
