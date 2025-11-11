@@ -3,7 +3,9 @@ package entity;
 import Main.GamePanel;
 import Main.KeyHandler;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.IOException;
 
 public class Player extends Entity {
 
@@ -21,6 +23,15 @@ public class Player extends Entity {
         x = 100;
         y = 100;
         speed = 4;
+    }
+    public void getPlayerImage(){
+        try {
+
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/player_Front.png"));//try to get the player sprites
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public void update() {
