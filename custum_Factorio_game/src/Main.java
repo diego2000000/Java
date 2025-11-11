@@ -7,7 +7,7 @@ public class Main {
         window.setResizable(false);// disables resizing
         window.setTitle("Factorio");
 
-        GamePanel gamePanel = new GamePanel();
+        GamePanel gamePanel = new GamePanel();//adds GamePanel to Main file
         window.add(gamePanel);
 
         window.pack();

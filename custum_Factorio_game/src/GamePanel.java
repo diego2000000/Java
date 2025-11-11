@@ -14,7 +14,7 @@ public class GamePanel extends JPanel implements Runnable {
     //FPS
     int FPS = 60;
 
-    KeyHandler keyH = new KeyHandler();
+    KeyHandler keyH = new KeyHandler();// adds key listener/handler to GamePanel
     Thread gameThread;
 
     //Set player default position
@@ -22,7 +22,7 @@ public class GamePanel extends JPanel implements Runnable {
     int playerY = 100;
     int playerSpeed = 4;
 
-    public GamePanel() {
+    public GamePanel() {//sets or adds the following functions to GamePanel
 
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));//sets window size
         this.setBackground(Color.black);
@@ -83,7 +83,7 @@ public class GamePanel extends JPanel implements Runnable {
 
     public void update() {
 
-        if (keyH.upPressed == true) {
+        if (keyH.upPressed == true) {//controls the Players speed
             playerY -= playerSpeed;
         } else if (keyH.downPressed == true) {
             playerY += playerSpeed;
@@ -98,11 +98,11 @@ public class GamePanel extends JPanel implements Runnable {
 
         super.paintComponent(g);//super calls JComponent
 
-        Graphics2D g2 = (Graphics2D) g;//Graphics2D has is mor controllable
+        Graphics2D g2 = (Graphics2D) g;//Graphics2D is more controllable
 
         g2.setColor(Color.white);//specifies color for g2
 
-        g2.fillRect(playerX, playerY, tileSize, tileSize);//draws a rectangle in specified color
+        g2.fillRect(playerX, playerY, tileSize, tileSize);//draws a rectangle in specified color and size
 
         g2.dispose();
     }
