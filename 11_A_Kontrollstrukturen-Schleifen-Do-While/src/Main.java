@@ -25,12 +25,13 @@ public class Main {
         //      while (iteratorEx1 < 10);
         //
         //      Questions to consider:
-        //      1. What would happen if you ran this code as is?
-        //      2. Why does this behavior occur?
+        //      1. What would happen if you ran this code as is? would run forever
+        //      2. Why does this behavior occur? no loop break
         //      3. How can you modify the code to achieve the desired output:
         //         i:0 i:1 i:2 i:3 i:4 i:5 i:6 i:7 i:8 i:9
+        //       iteratorEx1++;
         //      4. Extra: What happens, if the initial value of "iteratorEx1" would be set to 100 instead of 0?
-
+        //      do condition runs once
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
@@ -45,6 +46,113 @@ public class Main {
         //      02-08. 15 to -20 (descending)
         //      02-09. Even numbers from 10 to -10 (descending)
         //      02-10. Odd numbers from 10 to -10 (descending)
+        int number = 0;
+
+        System.out.println("02-01");
+
+        do {
+
+            System.out.print(number + " ");
+            number++;
+
+        } while (number <= 100);
+        System.out.println();
+
+        System.out.println("02-02");
+        number = 42;
+        do {
+
+            System.out.print(number + " ");
+            number++;
+
+        } while (number <= 100);
+        System.out.println();
+
+        System.out.println("02-03");
+        number = 42;
+        do {
+
+            System.out.print(number + " ");
+            number++;
+
+        } while (number <= 123);
+        System.out.println();
+
+        System.out.println("02-04");
+        number = 0;
+        do {
+            if ((number % 2) == 0) {
+
+                System.out.print(number + " ");
+            }
+            number++;
+
+        } while (number <= 10);
+        System.out.println();
+
+        System.out.println("02-05");
+        number = 0;
+        do {
+            if ((number % 2) != 0) {
+
+                System.out.print(number + " ");
+            }
+            number++;
+
+        } while (number <= 10);
+        System.out.println();
+
+        System.out.println("02-06");
+        number = -10;
+        do {
+
+            System.out.print(number + " ");
+            number++;
+
+        } while (number <= 20);
+        System.out.println();
+
+        System.out.println("02-07");
+        number = 35;
+        do {
+
+            System.out.print(number + " ");
+            number--;
+
+        } while (number >= 0);
+        System.out.println();
+
+        System.out.println("02-08");
+        number = 15;
+        do {
+
+            System.out.print(number + " ");
+            number--;
+
+        } while (number >= -20);
+        System.out.println();
+
+        System.out.println("02-09");
+        number = 10;
+        do {
+            if ((number % 2) == 0) {
+                System.out.print(number + " ");
+            }
+            number--;
+
+        } while (number >= -10);
+        System.out.println();
+
+        System.out.println("02-10");
+        number = 10;
+        do {
+            if ((number % 2) != 0) {
+                System.out.print(number + " ");
+            }
+            number--;
+
+        } while (number >= -10);
+        System.out.println();
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -54,6 +162,12 @@ public class Main {
         int whileSum_03 = 0;
 
         // Your code here
+        number = 0;
+        do {
+
+            whileSum_03 = whileSum_03 + number;
+            number++;
+        } while (number <= 100);
 
         System.out.println(whileSum_03); // Should be 5050
 
@@ -65,7 +179,14 @@ public class Main {
         int whileSum_04 = 0;
 
         // Your code here
+        number = 0;
+        do {
+            if ((number % 2) == 0) {
 
+                whileSum_04 = whileSum_04 + number;
+            }
+            number++;
+        } while (number <= 100);
         System.out.println(whileSum_04); // Should be 2550
 
 
@@ -76,7 +197,14 @@ public class Main {
         int whileSum_05 = 0;
 
         // Your code here
+        number = 0;
+        do {
+            if ((number % 2) != 0) {
 
+                whileSum_05 = whileSum_05 + number;
+            }
+            number++;
+        } while (number <= 100);
         System.out.println(whileSum_05); // Should be 2500
 
 
@@ -102,7 +230,11 @@ public class Main {
         // 3. Stops when 22 is generated
 
         // Your code here
+        do {
 
+            randomNumber = randomGenerator.nextInt(101);
+            iterationSteps++;
+        } while (randomNumber != 22);
         System.out.println("The program ran " + iterationSteps + " times until the number was found!");
 
 
@@ -130,7 +262,11 @@ public class Main {
         // 3. Continues until firstRandomNumber equals secondRandomNumber
 
         // Your code here
+        do {
 
+            secondRandomNumber = randomGenerator.nextInt(101);
+            iterationSteps++;
+        } while (secondRandomNumber != firstRandomNumber);
         System.out.println("The program ran " + iterationSteps + " times until both random numbers matched.");
         System.out.println("The matching number was: " + firstRandomNumber);
 
@@ -160,7 +296,12 @@ public class Main {
         // 3. Continues until the guessed number matches the random number
 
         // Your code here
+        do {
 
+            System.out.println("Guess a number from 1 to 10");
+            guessedNumber = input.nextInt();
+
+        } while (rndNumberToGuess != guessedNumber);
         System.out.println("Congratulations! You've guessed the correct number: " + rndNumberToGuess);
 
     }

@@ -105,7 +105,7 @@ public class MainX {
         System.out.println("02-09");
         number = 10;
         while (number >= -10) {
-            if ((number%2)==0) {
+            if ((number % 2) == 0) {
                 System.out.print(number + " ");
             }
             number--;
@@ -114,7 +114,7 @@ public class MainX {
         System.out.println("02-10");
         number = 10;
         while (number >= -10) {
-            if ((number%2)!=0) {
+            if ((number % 2) != 0) {
                 System.out.print(number + " ");
             }
             number--;
@@ -127,9 +127,9 @@ public class MainX {
         int whileSum_03 = 0;
 
         // Your code here
-        number=0;
-        while (number<=100){
-            whileSum_03=whileSum_03+number;
+        number = 0;
+        while (number <= 100) {
+            whileSum_03 = whileSum_03 + number;
             number++;
         }
 
@@ -142,9 +142,9 @@ public class MainX {
         int whileSum_04 = 0;
 
         // Your code here
-        number=0;
-        while (number<=100){
-            if ((number%2)==0) {
+        number = 0;
+        while (number <= 100) {
+            if ((number % 2) == 0) {
                 whileSum_04 = whileSum_04 + number;
             }
             number++;
@@ -159,9 +159,9 @@ public class MainX {
         int whileSum_05 = 0;
 
         // Your code here
-        number=0;
-        while (number<=100){
-            if ((number%2)!=0) {
+        number = 0;
+        while (number <= 100) {
+            if ((number % 2) != 0) {
                 whileSum_05 = whileSum_05 + number;
             }
             number++;
@@ -190,10 +190,10 @@ public class MainX {
         // 3. Stops when 22 is generated
 
         // Your code here
-while (randomNumber!=22){
-    randomNumber = randomGenerator.nextInt(101);
-    iterationSteps++;
-}
+        while (randomNumber != 22) {
+            randomNumber = randomGenerator.nextInt(101);
+            iterationSteps++;
+        }
         System.out.println("The program ran " + iterationSteps + " times until the number was found!");
     }
 }

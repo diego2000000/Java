@@ -58,7 +58,7 @@ public class Main {
                         int result = number02 * (number02 + 1) / 2 - number01 * (number01 + 1) / 2 + number01;
                         System.out.println(result);
                         System.out.println("Would you like to rerun the function? (y/n)");
-                        yOrN = userInput.nextLine();
+                        userInput.nextLine();
                         yOrN = userInput.nextLine();
                         if (yOrN.equalsIgnoreCase("n")) {
                             break;
@@ -138,7 +138,7 @@ public class Main {
                             "Wellerman - Nathan Evans",
                             "My Mother Told Me - Peyton Parrish",
                             "Hoist the Colors - Bobby Bass",
-                            ""
+                            "C`est la vie - dArgantan"
                     };
                     String[] pop = {
                             "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
