@@ -7,6 +7,6 @@ public class Entity {// defines stuff for all entitys
     public int x, y;
     public int speed;
 
-    public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2;
+    public BufferedImage up, up1, up2, down, down1, down2, left, left1, left2, right, right1, right2;
     public String direction;
 }

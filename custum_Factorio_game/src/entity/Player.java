@@ -28,7 +28,7 @@ public class Player extends Entity {
     public void getPlayerImage() {
         try {
 
-            down1 = ImageIO.read(getClass().getResourceAsStream("/player/player_Front.png"));//try to get the player sprites
+            down1 = ImageIO.read(getClass().getResourceAsStream("/player/player_Down.png"));//try to get the player sprites
 
         } catch (IOException e) {
             e.printStackTrace();
