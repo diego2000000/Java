@@ -1,4 +1,4 @@
-public class Main {
+public class MainY {
     public static void main(String[] args) {
 
         //--------------------------------------------------------------------------------------------------------------
