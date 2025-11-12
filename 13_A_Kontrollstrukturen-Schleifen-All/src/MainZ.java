@@ -1,3 +1,5 @@
+import java.time.Year;
+
 public class MainZ {
     public static void main(String[] args) {
 
@@ -15,7 +17,23 @@ public class MainZ {
         //      Hint1: The divisibility by a particular number can be checked using the modulo operator.
         //
         //      Hint2: Check if your implementation is correct. For example; the Year 1900 is not a leap year.
+        int yearNow = Year.now().getValue();
+        for (int year = 0; year <= yearNow;) {
+            System.out.println();
+            for (int width = 0; width <= 80; width++) {
+                if ((year % 4) == 0) {
+                    if ((year % 100) != 0) {
 
+                        System.out.print(year + " ");
+                    } else if ((year % 100) == 0 && (year % 400) == 0) {
+
+                        System.out.print(year + " ");
+                    }
+                }year++;
+            }
+
+        }
+        System.out.println();
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
         // 02.  Print out all numbers from 1-10.
