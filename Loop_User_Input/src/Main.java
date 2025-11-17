@@ -76,11 +76,11 @@ public class Main {
             }
             System.out.println("Which action do you want to perform:");
             option0to9 = userInput.nextByte();
-
+            String yOrN = "y";
             switch (option0to9) {
                 case 0:// exit function
                     System.out.println("Do you want to close the program? (y/n)");
-                    String yOrN;
+
                     yOrN = userInput.nextLine();
                     yOrN = userInput.nextLine();
                     if (yOrN.equalsIgnoreCase("y")) {
@@ -90,7 +90,6 @@ public class Main {
                     break;
 
                 case 1:
-                    yOrN = "y";
                     while (yOrN.equalsIgnoreCase("y")) {
                         int number01;
                         int number02;
@@ -110,7 +109,6 @@ public class Main {
                     break;
 
                 case 2:
-                    yOrN = "y";
                     subLoop:
                     while (yOrN.equalsIgnoreCase("y")) {
                         int number01;
@@ -162,7 +160,6 @@ public class Main {
                             "(2) seemans_lieder",
                             "(3) pop"
                     };
-                    yOrN = "y";
 
                     while (yOrN.equalsIgnoreCase("y")) {
                         for (int i = 0; i < genreName.length; i++) {
@@ -183,7 +180,11 @@ public class Main {
                     }
                     break;
                 case 4:
+                    while (yOrN.equalsIgnoreCase("y")) {
 
+                        System.out.println("How are you felling today, " + userName);
+
+                    }
                     break;
 
                 case 5:
