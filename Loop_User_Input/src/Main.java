@@ -6,6 +6,62 @@ public class Main {
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
         String userName;
+        String[] metal = {
+                "Let it Roar - Battle Beast",
+                "Bastard von Asgard - Feuerschwanz",
+                "Sulfur - LANDMVRKS",
+                "My Apocalypse - Arche Enemy",
+                "Fear of the Dark - Iron Maiden",
+                "Dance of Death - Iron Maiden",
+                "Straight To Hell`25 - Rage",
+                "Metfest - Feuerschwanz",
+                "Heavy Metal Viking - Brothers of Metal"
+        };
+        String[] punk = {
+                "Optimisten - ENGST",
+                "Junge, dein Leben - Serum 114",
+                "Punk - Adam Angst",
+                "Die Hände hoch - BRDIGUNG",
+                "So erheben wir das Glas - Eizbrand",
+                "Virus deiner Zeit - Ampex",
+                "K.B.A.G - Jennifer Rostock",
+                "Hit That - The Offspring",
+                "Deine Schuld - Die Ärtzte"
+        };
+        String[] seemans_lieder = {
+                "Frei wie der Wind - Santiano",
+                "Dann bin ich weg - Santiano",
+                "Santiano - Santiano",
+                "Santa Sangria - Mr.Hurley & Die Pulveraffen",
+                "Drunken Sailor - MALINDA",
+                "Wellerman - Nathan Evans",
+                "My Mother Told Me - Peyton Parrish",
+                "Hoist the Colors - Bobby Bass",
+                "C`est la vie - dArgantan"
+        };
+        String[] pop = {
+                "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
+                "Pure Lust am Leben - Geier Sturzflug",
+                "Die Zeit - EAV",
+                "Wirf die Motorsäge an - EAV",
+                "Es fährt kein Zug - EAV",
+                "Eloise & Die Krise - EAV",
+                "Lez Dance - EAV",
+                "3 weisse Tauben - EAV",
+                "Neandertal - EAV"
+        };
+        String[] menu = {
+                "(0) : Go back to startmenu",
+                "(1) : Sum from n to m (Example: 0-100 = 5050)",
+                "(2) : Guess my random number from n-m",
+                "(3) : Suggest me a song!",
+                "(4) : Pastoral care",
+                "(5) : Temperature converter",
+                "(6) : Factor finder",
+                "(7) : Sum of every nth number up to 1000",
+                "(8) :",
+                "(9) :"
+        };
         byte option0to9;
         System.out.println("Hello and welcome ! May i know your name?");
         System.out.println("Your name:");
@@ -15,19 +71,6 @@ public class Main {
         mainLoop:
 // gives the overarching loop an id to directly break out of it
         while (true) {
-            String[] menu = {
-                    "(0) : Go back to startmenu",
-                    "(1) : Sum from n to m (Example: 0-100 = 5050)",
-                    "(2) : Guess my random number from n-m",
-                    "(3) : Suggest me a song!",
-                    "(4) : Pastoral care",
-                    "(5) : Temperature converter",
-                    "(6) : Factor finder",
-                    "(7) : Sum of every nth number up to 1000",
-                    "(8) :",
-                    "(9) :"
-            };
-
             for (String option : menu) {//String option assigns the individual array items to a string
                 System.out.println(option);
             }
@@ -64,6 +107,7 @@ public class Main {
                             break;
                         }
                     }
+                    break;
 
                 case 2:
                     yOrN = "y";
@@ -82,7 +126,7 @@ public class Main {
                                 System.out.println("I have a random number form " + number01 + " to " + number02 + ", what do you think is it?");
                                 Random randomRange = new Random();
                                 int result = randomRange.nextInt(number02 - number01) + number01;
-                                System.out.println(result);
+                                //System.out.println(result);
                                 int awnser = 99;
                                 while (result != awnser) {
                                     System.out.println("Take you Guess");
@@ -106,51 +150,9 @@ public class Main {
                             System.out.println("numbers must be different");
                         }
                     }
+                    break;
                 case 3:
-                    String[] metal = {
-                            "Let it Roar - Battle Beast",
-                            "Bastard von Asgard - Feuerschwanz",
-                            "Sulfur - LANDMVRKS",
-                            "My Apocalypse - Arche Enemy",
-                            "Fear of the Dark - Iron Maiden",
-                            "Dance of Death - Iron Maiden",
-                            "Straight To Hell`25 - Rage",
-                            "Metfest - Feuerschwanz",
-                            "Heavy Metal Viking - Brothers of Metal"
-                    };
-                    String[] punk = {
-                            "Optimisten - ENGST",
-                            "Junge, dein Leben - Serum 114",
-                            "Punk - Adam Angst",
-                            "Die Hände hoch - BRDIGUNG",
-                            "So erheben wir das Glas - Eizbrand",
-                            "Virus deiner Zeit - Ampex",
-                            "K.B.A.G - Jennifer Rostock",
-                            "Hit That - The Offspring",
-                            "Deine Schuld - Die Ärtzte"
-                    };
-                    String[] seemans_lieder = {
-                            "Frei wie der Wind - Santiano",
-                            "Dann bin ich weg - Santiano",
-                            "Santiano - Santiano",
-                            "Santa Sangria - Mr.Hurley & Die Pulveraffen",
-                            "Drunken Sailor - MALINDA",
-                            "Wellerman - Nathan Evans",
-                            "My Mother Told Me - Peyton Parrish",
-                            "Hoist the Colors - Bobby Bass",
-                            "C`est la vie - dArgantan"
-                    };
-                    String[] pop = {
-                            "Brigitte, Bitte!(Die Zigarette) - Geier Sturzflug",
-                            "Pure Lust am Leben - Geier Sturzflug",
-                            "Die Zeit - EAV",
-                            "Wirf die Motorsäge an - EAV",
-                            "Es fährt kein Zug - EAV",
-                            "Eloise & Die Krise - EAV",
-                            "Lez Dance - EAV",
-                            "3 weisse Tauben - EAV",
-                            "Neandertal - EAV"
-                    };
+
                     String[][] genre = {
                             metal, punk, seemans_lieder, pop
                     };
@@ -161,7 +163,7 @@ public class Main {
                             "(3) pop"
                     };
                     yOrN = "y";
-                    subLoop:
+
                     while (yOrN.equalsIgnoreCase("y")) {
                         for (int i = 0; i < genreName.length; i++) {
                             System.out.println(genreName[i]);
@@ -169,15 +171,19 @@ public class Main {
                         Random randomSong = new Random();
                         int song = randomSong.nextInt(0, 9);
                         option0to9 = userInput.nextByte();
-                        System.out.println(genre[option0to9][song]);
-                        System.out.println("do you want to try again? (y/n)");
-                        yOrN = userInput.nextLine();
-                        yOrN = userInput.nextLine();
-                        if (yOrN.equalsIgnoreCase("n")) {
-                            break subLoop;
+                        if (option0to9 < genre.length) {
+                            System.out.println(genre[option0to9][song]);
+                            System.out.println("do you want to try again? (y/n)");
+                            yOrN = userInput.nextLine();
+                            yOrN = userInput.nextLine();
+                            if (yOrN.equalsIgnoreCase("n")) {
+                                break;
+                            }
                         }
                     }
+                    break;
                 case 4:
+
                     break;
 
                 case 5:
