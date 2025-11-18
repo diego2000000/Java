@@ -68,7 +68,11 @@ public class Player extends Entity {
                 case 1 -> spriteNum = 2;
                 case 2 -> spriteNum = 3;
                 case 3 -> spriteNum = 4;
-                case 4 -> spriteNum = 1;
+                case 4 -> spriteNum = 5;
+                case 5 -> spriteNum = 6;
+                case 6 -> spriteNum = 7;
+                case 7 -> spriteNum = 1;
+
             }
 //            if (spriteNum == 1) {
 //                spriteNum = 2;
@@ -96,8 +100,11 @@ public class Player extends Entity {
                 switch (spriteNum) {
                     case 1 -> image = up;
                     case 2 -> image = up1;
-                    case 3 -> image = up;
-                    case 4 -> image = up2;
+                    case 3 -> image = up1;
+                    case 4 -> image = up;
+                    case 5 -> image = up;
+                    case 6 -> image = up2;
+                    case 7 -> image = up2;
                 }
 
                 break;
@@ -105,8 +112,11 @@ public class Player extends Entity {
                 switch (spriteNum) {
                     case 1 -> image = down;
                     case 2 -> image = down1;
-                    case 3 -> image = down;
-                    case 4 -> image = down2;
+                    case 3 -> image = down1;
+                    case 4 -> image = down;
+                    case 5 -> image = down;
+                    case 6 -> image = down2;
+                    case 7 -> image = down2;
                 }
 
                 break;
@@ -114,8 +124,11 @@ public class Player extends Entity {
                 switch (spriteNum) {
                     case 1 -> image = left;
                     case 2 -> image = left1;
-                    case 3 -> image = left;
-                    case 4 -> image = left2;
+                    case 3 -> image = left1;
+                    case 4 -> image = left;
+                    case 5 -> image = left;
+                    case 6 -> image = left2;
+                    case 7 -> image = left2;
                 }
 
                 break;
@@ -123,8 +136,11 @@ public class Player extends Entity {
                 switch (spriteNum) {
                     case 1 -> image = right;
                     case 2 -> image = right1;
-                    case 3 -> image = right;
-                    case 4 -> image = right2;
+                    case 3 -> image = right1;
+                    case 4 -> image = right;
+                    case 5 -> image = right;
+                    case 6 -> image = right2;
+                    case 7 -> image = right2;
                 }
 
                 break;
