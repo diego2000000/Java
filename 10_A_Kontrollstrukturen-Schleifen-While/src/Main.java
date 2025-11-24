@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class MainX {
+public class Main {
     public static void main(String[] args) {
 
         //--------------------------------------------------------------------------------------------------------------

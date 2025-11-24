@@ -3,7 +3,6 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/10_A_Kontrollstrukturen-Schleifen-While/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/11_A_Kontrollstrukturen-Schleifen-Do-While/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/12_A_Kontrollstrukturen-Schleifen-For/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/13_A_Kontrollstrukturen-Schleifen-All/src" isTestSource="false" />
