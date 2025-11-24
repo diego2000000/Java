@@ -59,7 +59,25 @@ public class Main {
         //      Please input an integer. (0 to exit, 17 numbers remaining)
         //      0
         //      You provided 4 numbers. The sum of those numbers are : 12
-
+        Scanner userInput = new Scanner(System.in);
+        int numbersToRead = 20;
+        int userNumber;
+        int sum = 0;
+        int iterations = 0;
+        while (true) {
+            System.out.println("Please input an integer. (0 to exit, 20 numbers remaining)");
+            userNumber = userInput.nextInt();
+            System.out.println(userNumber);
+            sum += userNumber;
+            if (userNumber == 0) {
+                break;
+            }
+            iterations++;
+            if (iterations >= numbersToRead) {
+                break;
+            }
+        }
+        System.out.println("You provided " + iterations + " numbers. The sum of those numbers are : " + sum);
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 02");
@@ -92,8 +110,22 @@ public class Main {
         // What is currently making your life difficult or what do you like to do (type "exit" to quit)?
         // exit
         // You have exited the program (Exercise 02)
+        userInput.nextLine();
+        String userLifeChallenge;
+        while (true) {
 
+            System.out.println("What is currently making your life difficult or what do you like to do (type \"exit\" to quit)?");
+            userLifeChallenge = userInput.nextLine();
+            if (userLifeChallenge.equalsIgnoreCase("exit")) {
+                break;
+            } else if (userLifeChallenge.equalsIgnoreCase("money")) {
+                System.out.println("Money can be good or bad!");
+            } else if (userLifeChallenge.equalsIgnoreCase("traveling")) {
+                System.out.println("Traveling. Uff, that's a tough one!");
+            }
 
+        }
+        System.out.println("You have exited the program (Exercise 02)");
 
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 03");
@@ -119,6 +151,23 @@ public class Main {
         //      Enter a number (0 to quit):
         //      0
         //      Program ended. You entered 3 numbers. Sum of squares: 29
+        sum = 0;
+        iterations = 0;
+        while (true) {
+            System.out.println("Enter a number (0 to quit):");
+            userNumber = userInput.nextInt();
+            if (userNumber == 0) {
+                break;
+            } else if (userNumber < 0) {
+                System.out.println("Unsuitable number");
+            } else {
+                System.out.println(userNumber * userNumber);
+                sum += userNumber * userNumber;
+
+            }
+            iterations++;
+        }
+        System.out.println("Program ended. You entered "+iterations+" numbers. Sum of squares: "+sum);
 
 
         //--------------------------------------------------------------------------------------------------------------
