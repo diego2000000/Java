@@ -197,8 +197,34 @@ public class Main {
         //      The sum of the 3 positive numbers is: 62
         //      The sum of the 2 negative numbers is: -20
         //      The total sum is positive: 42
+            int sumPositive=0;
+            int sumNegative=0;
+            int iterationNegative=0;
+            sum=0;
+            userNumber=0;
 
+            while (true){
 
+                System.out.println("Type in a number (0=exit):");
+                userNumber=userInput.nextInt();
+                if (userNumber<0){
+                    sumNegative+=userNumber;
+                    iterationNegative++;
+                }else if (userNumber==0){
+                    break;
+                }else {
+                    sumPositive+=userNumber;
+                    iterations++;
+                }
+            }
+            sum=sumNegative+sumPositive;
+        System.out.println("The sum of the "+iterations+" positive numbers is:"+sumPositive);
+        System.out.println("The sum of the "+iterationNegative+" negative numbers is: "+sumNegative);
+        if (sum<0) {
+            System.out.println("The total sum is negative: " + sum);
+        }else {
+            System.out.println("The total sum is positive: " + sum);
+        }
         //--------------------------------------------------------------------------------------------------------------
         System.out.println("Exercise 05");
         // 05.  The following code below will run endlessly. Why?
@@ -211,6 +237,7 @@ public class Main {
         while(countingNumber <= 10) {
             if(countingNumber == 5) {
                 System.out.println("Skipping number 5...");
+                countingNumber++;
                 continue;
             }
             System.out.println("Number: " + countingNumber);
