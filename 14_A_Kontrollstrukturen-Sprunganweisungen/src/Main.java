@@ -255,7 +255,7 @@ public class Main {
         //      - Stop the loop if the square exceeds 200 (use break for this)
         //      Use a for loop, and make sure to use both continue and break statements.
         //      Calculate and print the sum of all odd squares (should be 365)
-        sum=0;
+        sum = 0;
 
         for (int i = 1; i <= 20; i++) {
             int iSquare = i * i;
@@ -265,11 +265,12 @@ public class Main {
             } else if (iSquare % 3 == 0) {
                 continue;
             }
-            if (iSquare%2==1){
-                sum+=iSquare;
+            if (iSquare % 2 == 1) {
+                sum += iSquare;
 
             }
-        }System.out.println(sum);
+        }
+        System.out.println(sum);
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -283,20 +284,21 @@ public class Main {
         System.out.print("Prime numbers from 100 to 200: ");
         int primesCounter = 0;
         int nonPrimesCounter = 0;
+        int[] primeNumber = {0};
 
         // Your solution here
-        for (int i = 100; i <= 200; i++) {
-            if (i % 2 == 1){
-               int []primeNumber={i};
+        for (int i = 100; i < 200; i++) {
+            if (i % 2 == 1) {
+                System.out.print(i + " ");
                 primesCounter++;
-            }nonPrimesCounter++;
+            } else {
+                nonPrimesCounter++;
+            }
 
-                System.out.println("\nTotal numbers: " + (primesCounter + nonPrimesCounter) + ".");
         }
+        System.out.println("");
         System.out.println("Number of non-prime numbers: " + nonPrimesCounter);
-        for (int i : primeNumber){
-            System.out.print(" "+i+ " ");
-        }
+        System.out.println("Total numbers: " + (primesCounter + nonPrimesCounter) + ".");
         System.out.println("Number of prime numbers: " + primesCounter);
 
 
@@ -311,10 +313,16 @@ public class Main {
         //      The smallest divisor of 1337 is: 7
 
         int number = 1337;
-        int smallestDivisor = 1;
+        int smallestDivisor = 2;
 
         // Your solution here
+        while (true) {
+            if (number % smallestDivisor == 0) {
+                break;
+            }
+            smallestDivisor++;
 
+        }
         System.out.println("The smallest divisor of " + number + " is: " + smallestDivisor);
 
 
@@ -334,7 +342,20 @@ public class Main {
         int gcd = 1; // GCD for the above numbers would be 12.
 
         // Your solution here
-
+        while (true) {
+            if (number1Ex9 < number2Ex9) {
+                gcd = number1Ex9;
+                while (number1Ex9 % gcd != 0 || number2Ex9 % gcd != 0) {
+                    gcd--;
+                }
+            } else {
+                gcd = number2Ex9;
+                while (number1Ex9 % gcd != 0 || number2Ex9 % gcd != 0) {
+                    gcd--;
+                }
+            }
+            break;
+        }
         System.out.println("The Greatest Common Divisor (GCD) of " + number1Ex9 + " and " + number2Ex9 + " is: " + gcd);
 
     }
