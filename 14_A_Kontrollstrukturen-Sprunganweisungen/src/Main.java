@@ -167,7 +167,7 @@ public class Main {
             }
             iterations++;
         }
-        System.out.println("Program ended. You entered "+iterations+" numbers. Sum of squares: "+sum);
+        System.out.println("Program ended. You entered " + iterations + " numbers. Sum of squares: " + sum);
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -197,32 +197,32 @@ public class Main {
         //      The sum of the 3 positive numbers is: 62
         //      The sum of the 2 negative numbers is: -20
         //      The total sum is positive: 42
-            int sumPositive=0;
-            int sumNegative=0;
-            int iterationNegative=0;
-            sum=0;
-            userNumber=0;
+        int sumPositive = 0;
+        int sumNegative = 0;
+        int iterationNegative = 0;
+        sum = 0;
+        userNumber = 0;
 
-            while (true){
+        while (true) {
 
-                System.out.println("Type in a number (0=exit):");
-                userNumber=userInput.nextInt();
-                if (userNumber<0){
-                    sumNegative+=userNumber;
-                    iterationNegative++;
-                }else if (userNumber==0){
-                    break;
-                }else {
-                    sumPositive+=userNumber;
-                    iterations++;
-                }
+            System.out.println("Type in a number (0=exit):");
+            userNumber = userInput.nextInt();
+            if (userNumber < 0) {
+                sumNegative += userNumber;
+                iterationNegative++;
+            } else if (userNumber == 0) {
+                break;
+            } else {
+                sumPositive += userNumber;
+                iterations++;
             }
-            sum=sumNegative+sumPositive;
-        System.out.println("The sum of the "+iterations+" positive numbers is:"+sumPositive);
-        System.out.println("The sum of the "+iterationNegative+" negative numbers is: "+sumNegative);
-        if (sum<0) {
+        }
+        sum = sumNegative + sumPositive;
+        System.out.println("The sum of the " + iterations + " positive numbers is:" + sumPositive);
+        System.out.println("The sum of the " + iterationNegative + " negative numbers is: " + sumNegative);
+        if (sum < 0) {
             System.out.println("The total sum is negative: " + sum);
-        }else {
+        } else {
             System.out.println("The total sum is positive: " + sum);
         }
         //--------------------------------------------------------------------------------------------------------------
@@ -255,6 +255,21 @@ public class Main {
         //      - Stop the loop if the square exceeds 200 (use break for this)
         //      Use a for loop, and make sure to use both continue and break statements.
         //      Calculate and print the sum of all odd squares (should be 365)
+        sum=0;
+
+        for (int i = 1; i <= 20; i++) {
+            int iSquare = i * i;
+
+            if (iSquare >= 200) {
+                break;
+            } else if (iSquare % 3 == 0) {
+                continue;
+            }
+            if (iSquare%2==1){
+                sum+=iSquare;
+
+            }
+        }System.out.println(sum);
 
 
         //--------------------------------------------------------------------------------------------------------------
@@ -270,9 +285,18 @@ public class Main {
         int nonPrimesCounter = 0;
 
         // Your solution here
+        for (int i = 100; i <= 200; i++) {
+            if (i % 2 == 1){
+               int []primeNumber={i};
+                primesCounter++;
+            }nonPrimesCounter++;
 
-        System.out.println("\nTotal numbers: " + (primesCounter + nonPrimesCounter) + ".");
+                System.out.println("\nTotal numbers: " + (primesCounter + nonPrimesCounter) + ".");
+        }
         System.out.println("Number of non-prime numbers: " + nonPrimesCounter);
+        for (int i : primeNumber){
+            System.out.print(" "+i+ " ");
+        }
         System.out.println("Number of prime numbers: " + primesCounter);
 
 
