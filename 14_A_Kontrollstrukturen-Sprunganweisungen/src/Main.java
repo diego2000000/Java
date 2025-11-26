@@ -202,6 +202,7 @@ public class Main {
         int iterationNegative = 0;
         sum = 0;
         userNumber = 0;
+        iterations = 0;
 
         while (true) {
 
@@ -285,12 +286,19 @@ public class Main {
         int primesCounter = 0;
         int nonPrimesCounter = 0;
         int[] primeNumber = {0};
+        int i;
+        int biggerNumber = 200;
 
         // Your solution here
-        for (int i = 100; i < 200; i++) {
+        for (i = 100; i < biggerNumber; i++) {
             if (i % 2 == 1) {
-                System.out.print(i + " ");
-                primesCounter++;
+                for (int j = 2; i % j != 0; j++) {
+                    if (i % j != 0) {
+                        System.out.print(i + " ");
+                        primesCounter++;
+                    }
+                }
+
             } else {
                 nonPrimesCounter++;
             }
@@ -336,8 +344,8 @@ public class Main {
         //      Example output:
         //      The Greatest Common Divisor (GCD) of 24 and 36 is: 12
 
-        int number1Ex9 = 24;
-        int number2Ex9 = 36;
+        int number1Ex9 = 36;
+        int number2Ex9 = 24;
 
         int gcd = 1; // GCD for the above numbers would be 12.
 
@@ -345,15 +353,13 @@ public class Main {
         while (true) {
             if (number1Ex9 < number2Ex9) {
                 gcd = number1Ex9;
-                while (number1Ex9 % gcd != 0 || number2Ex9 % gcd != 0) {
-                    gcd--;
-                }
             } else {
                 gcd = number2Ex9;
-                while (number1Ex9 % gcd != 0 || number2Ex9 % gcd != 0) {
-                    gcd--;
-                }
             }
+            while (number1Ex9 % gcd != 0 || number2Ex9 % gcd != 0) {
+                gcd--;
+            }
+
             break;
         }
         System.out.println("The Greatest Common Divisor (GCD) of " + number1Ex9 + " and " + number2Ex9 + " is: " + gcd);
