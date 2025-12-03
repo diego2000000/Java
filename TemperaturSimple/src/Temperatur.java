@@ -14,6 +14,9 @@ public class Temperatur {
     public static void printCelsius(double temp) {
 
         System.out.println(temp + " ° Celsius");
+    }public void directPrintCelsius(double temp) {
+
+        System.out.println(temp + " ° Celsius");
     }
 
     public static void hotORCold(double temp) {
